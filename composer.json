@@ -1,0 +1,25 @@
+{
+    "name": "mithuTS/advanced-search",
+    "authors": [
+        {
+            "name": "Mithu A Quayium",
+            "email": "cemithu06@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "mithuTS\\AdvancedSearch\\": "src"
+        },
+        "files": [
+            "src/Includes/init.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mithuTS\\AdvancedSearch\\AdvancedSearchServiceProvider"
+            ]
+        }
+    }
+}
