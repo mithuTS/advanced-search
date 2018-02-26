@@ -15,7 +15,6 @@ class VoyagerBaseController extends VoyagerBreadController
      * @var bool
      */
     protected $advSearch = false;
-    private $pdfExport = false;
 
 
     /**
@@ -26,10 +25,6 @@ class VoyagerBaseController extends VoyagerBreadController
         $this->advSearch = $true;
     }
 
-    public function setPdfExport( $true = true ) {
-        $this->pdfExport = $true;
-    }
-
 
     /**
      * Check if the module is
@@ -38,10 +33,6 @@ class VoyagerBaseController extends VoyagerBreadController
      */
     public function isSearchable() {
         return $this->advSearch;
-    }
-
-    public function isPdfExportable() {
-        return $this->pdfExport;
     }
 
 
@@ -117,7 +108,6 @@ class VoyagerBaseController extends VoyagerBreadController
      */
     public function index(Request $request) {
         $advSearch = $this->isSearchable();
-        $pdfExport = $this->isPdfExportable();
 
         // GET THE SLUG, ex. 'posts', 'pages', etc.
         $slug = $this->getSlug($request);
@@ -193,7 +183,6 @@ class VoyagerBaseController extends VoyagerBreadController
             'isModelTranslatable',
             'search',
             'advSearch',
-            'pdfExport',
             'orderBy',
             'sortOrder',
             'searchable',

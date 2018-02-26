@@ -14,6 +14,5 @@ class CustomerController extends VoyagerBaseController
      */
     public function __construct() {
         $this->setAdvSearch(true);
-        $this->setPdfExport(true);
     }
 }

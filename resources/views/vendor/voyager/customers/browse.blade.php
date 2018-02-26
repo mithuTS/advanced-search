@@ -27,9 +27,6 @@
                 <i class="voyager-search"></i> <span>{{ 'Search' }}</span>
             </a>
         @endif
-        @if( $pdfExport )
-            <a href="">Export to PDF</a>
-        @endif
         @include('voyager::multilingual.language-selector')
     </div>
 @stop
